@@ -17,6 +17,22 @@ end
 require 'sinatra/activerecord/rake'
 require './app'
 
+namespace :app do
+  desc 'Run the dependency update cycle.'
+  task :update_dependencies do
+    # update every version
+    BoxesMonitor.dependencies.each do |k, v|
+      v.each do |ea|
+        current_version = BoxesMonitor::VersionScraper.run(k.to_sym, ea)
+
+        puts "current_version: #{current_version}"
+      end
+    end
+
+    # run the notifications
+  end
+end
+
 ##
 # Configure the test suite.
 ##
