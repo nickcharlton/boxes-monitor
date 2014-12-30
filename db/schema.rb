@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230113919) do
+ActiveRecord::Schema.define(version: 20141230114529) do
 
   create_table "tools", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "version"
+    t.string   "checksum"
+    t.string   "iso_url"
+    t.string   "commit_hash"
+    t.integer  "tool_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
