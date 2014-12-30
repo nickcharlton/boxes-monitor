@@ -1,0 +1,6 @@
+---
+ubuntu:
+    - lucid
+    - precise
+    - raring
+    - trusty
