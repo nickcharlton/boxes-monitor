@@ -14,8 +14,8 @@ end
 ##
 # Pull in the application
 ##
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'boxes_monitor'
+require 'sinatra/activerecord/rake'
+require './app'
 
 ##
 # Configure the test suite.
