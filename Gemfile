@@ -4,6 +4,7 @@ ruby '2.1.5'
 
 # general
 gem 'rake', '~> 10.4'
+gem 'activesupport', '~> 4.2'
 
 # scraping
 gem 'faraday', '~> 0.9'

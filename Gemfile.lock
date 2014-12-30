@@ -53,6 +53,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 4.2)
   faraday (~> 0.9)
   minitest (~> 5.4)
   nokogiri (= 1.6.4.1)
