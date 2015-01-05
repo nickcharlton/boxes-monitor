@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150105112452) do
+ActiveRecord::Schema.define(version: 20150105114238) do
 
   create_table "tools", force: :cascade do |t|
     t.string   "name"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20150105112452) do
   end
 
   create_table "versions", force: :cascade do |t|
-    t.string   "name"
     t.string   "version"
     t.string   "checksum"
     t.string   "iso_url"
