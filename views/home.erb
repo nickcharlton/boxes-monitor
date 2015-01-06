@@ -1,0 +1,19 @@
+<header>
+  <h2>Boxes Monitor</h2>
+</header>
+
+<table>
+  <tr>
+    <th>Tool</th>
+    <th>Latest Version</th>
+    <th>&nbsp;</th>
+  </tr>
+
+  <% @tools.each do |tool| %>
+  <tr>
+    <td><%= tool.name %></td>
+    <td><%= tool.versions.latest.version %></td>
+    <td><a href="<%= url "/tools/#{tool.id}" %>">Info</a></td>
+  </tr>
+  <% end %>
+</table>

@@ -8,5 +8,8 @@ require 'boxes_monitor'
 end
 
 get '/' do
-  'Hello World'
+  @title = 'Boxes Monitor'
+  @tools = Tool.all
+
+  erb :home
 end
