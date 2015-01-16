@@ -1,0 +1,20 @@
+<header>
+  <h2><a href="<%= url '/' %>">Boxes Monitor</a></h2>
+  <h3><%= @tool.name %></h3>
+</header>
+
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Checksum</th>
+    <th>Last Updated</th>
+  </tr>
+
+  <% @tool.versions.each do |version| %>
+  <tr>
+    <td><a href="<%= version.iso_url %>"><%= version.version %></a></td>
+    <td><code><%= version.checksum %></code></td>
+    <td><%= version.created_at %></td>
+  </tr>
+  <% end %>
+</table>

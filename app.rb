@@ -13,3 +13,10 @@ get '/' do
 
   erb :home
 end
+
+get '/tools/:id' do
+  @tool = Tool.find(params[:id])
+  @title = "#{@tool.name} – Boxes Monitor"
+
+  erb :tool
+end
