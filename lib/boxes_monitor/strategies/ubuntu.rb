@@ -22,7 +22,7 @@ module BoxesMonitor
         end
 
         # the last one is the most recent
-        versions.last
+        versions
       end
     end
   end

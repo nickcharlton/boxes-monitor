@@ -23,7 +23,7 @@ namespace :app do
     # update every version
     BoxesMonitor.dependencies.each do |k, v|
       v.each do |ea|
-        current_version = BoxesMonitor::VersionScraper.run(k.to_sym, ea)
+        versions = BoxesMonitor::VersionScraper.run(k.to_sym, ea)
 
         # build up the tool name, with a special case for GitHub repos
         if k == 'github'
@@ -36,12 +36,13 @@ namespace :app do
         puts "Added new tool: #{tool_name}" if tool.new_record?
         tool.save!
 
-        existing = tool.versions.find_by_version current_version[:version]
-        unless existing
-          version = Version.new Hash[tool: tool].merge current_version
-          version.save!
+        versions.each do |version|
+          existing = tool.versions.find_by_version version[:version]
+          unless existing
+            Version.create Hash[tool: tool].merge version
 
-          puts "Added new version: #{tool.name} #{current_version[:version]}"
+            puts "Added new version: #{tool.name} #{version[:version]}"
+          end
         end
       end
     end
