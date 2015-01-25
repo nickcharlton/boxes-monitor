@@ -8,7 +8,7 @@ gem 'activesupport', '~> 4.2'
 
 # scraping
 gem 'faraday', '~> 0.9.0'
-gem 'nokogiri', '1.6.5'
+gem 'nokogiri', '~> 1.6'
 
 # sinatra
 gem 'sinatra', '~> 1.4'
