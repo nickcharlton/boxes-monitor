@@ -20,3 +20,6 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3'
   gem 'pry'
 end
+
+# codeclimate test coverage reports
+gem 'codeclimate-test-reporter', group: :test, require: nil
