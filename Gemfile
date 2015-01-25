@@ -15,7 +15,8 @@ gem 'sinatra', '~> 1.4'
 gem 'sinatra-activerecord', '~> 2.0'
 
 group :development, :test do
+  gem 'rspec', '~> 3.1'
+  gem 'rack-test', '~> 0.6'
   gem 'sqlite3', '~> 1.3'
   gem 'pry'
-  gem 'minitest', '~> 5.4'
 end
