@@ -4,3 +4,6 @@ ubuntu:
     - precise
     - raring
     - trusty
+debian:
+    - current
+    - oldstable
