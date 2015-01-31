@@ -19,7 +19,7 @@ def app
 end
 
 # load in the support directory
-Dir['support/**/*.rb'].each { |f| require File.expand_path f, __dir__ }
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 # bring up the migrations
 ActiveRecord::Migrator.up 'db/migrate'
