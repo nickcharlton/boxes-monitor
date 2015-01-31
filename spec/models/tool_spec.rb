@@ -1,4 +1,4 @@
-require 'spec_helper'
+require File.expand_path '../spec_helper.rb', __dir__
 
 RSpec.describe Tool do
   it 'has a valid factory' do
