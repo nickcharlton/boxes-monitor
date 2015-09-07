@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.2.3'
 
 # general
 gem 'rake', '~> 10.4'
